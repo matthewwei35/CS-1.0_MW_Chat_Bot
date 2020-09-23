@@ -31,10 +31,11 @@ print("~~~~ Welcome to Food Bot ~~~~")
 print("- We reccommend dishes in a specfic cuisine you enter in, an example of a cuisine would be 'Chinese'.")
 print("- If you're finished, type in 'done'.")
 
-# Stores an empty string
+# Stores an empty string so we assign a value later
 user_response = ""
 
-# Keeps repearing while user_response is not equalt to 'done'
+# Keeps repeating and asking 'What cuisine are you craving right now?:' while user_response is not equal to 'done'
+# When user_response is equal to 'done', the loop ends
 while user_response != "done":
     user_response = input("What cuisine are you craving right now?: ")
     bot_response = get_food_bot_response(user_response)
