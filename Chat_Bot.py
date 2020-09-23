@@ -4,20 +4,30 @@
 
 from random import choice
 
-def get_food_bot_response(user_response): 
-  bot_response_chinese = ['Hotpot!', 'Dumplings!', 'Peking Roasted Duck!', 'Chow Mein!']
+def get_food_bot_response(user_response):
+    bot_response_chinese = ['Hotpot!', 'Dumplings!', 'Peking Roasted Duck!', 'Chow Mein!', 'Steamed Vermicelli Rolls!']
+    bot_response_italian = ['Lasagna', 'Risotto!', 'Truffles!', 'Gelato!', 'Pizza!']
 
-  if user_response == "chinese":
-    return choice(bot_response_chinese)
-  else:
-    return "Come back for more! "
+    if user_response == "Chinese":
+        return choice(bot_response_chinese)
+    elif user_response == "Italian":
+        return choice(bot_response_italian)
+    elif user_response == "":
+        pass
+    elif user_response == "":
+        pass
+    elif user_response == "done":
+        return "See you next meal!"
+    else:
+        return "Sorry, I don't know that cuisine."
 
-print("Welcome to Food Bot")
-print("This bot reccommends specfic dishes in a certain category of cuisine")
+print("~~~~ Welcome to Food Bot ~~~~")
+print("We reccommend dishes in a specfic cuisine you enter in, an example would be 'Chinese'.")
+print("If you are finished, type in 'done'.")
 
 user_response = ""
 
 while user_response != "done":
-  user_response = input("What are you craving right now?: ")
-  bot_response = get_food_bot_response(user_response)
-  print(bot_response)
+    user_response = input("What cuisine are you craving right now?: ")
+    bot_response = get_food_bot_response(user_response)
+    print(bot_response)
