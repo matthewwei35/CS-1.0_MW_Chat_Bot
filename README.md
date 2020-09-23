@@ -1,7 +1,8 @@
 # Food Bot
 ## Description
 This chat bot basically reccommends you dishes in a specific cuisine you give to the bot.
-There's not much too it as there are only 4 options for cuisines: Chinese, Italian, Mexican, and Japanese. 
+There's not much too it as there are only 4 options for cuisines: Chinese, Italian, Mexican, and Japanese.
+Food is yummy.
 
 This is for CS 1.0.
 ## Usage
