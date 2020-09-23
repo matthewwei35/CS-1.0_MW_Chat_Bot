@@ -7,15 +7,17 @@ from random import choice
 def get_food_bot_response(user_response):
     bot_response_chinese = ['Hotpot!', 'Dumplings!', 'Peking Roasted Duck!', 'Chow Mein!', 'Steamed Vermicelli Rolls!']
     bot_response_italian = ['Lasagna', 'Risotto!', 'Truffles!', 'Gelato!', 'Pizza!']
+    bot_response_mexican = ['Horchate!', 'Chicken Tamales!', 'Chilaquiles!', 'Tostadas!', 'Enchiladas!']
+    bot_response_japanese = ['Sushi!', 'Tempura!', 'Tofu!', 'Ramen!', 'Udon!']
 
     if user_response == "Chinese":
         return choice(bot_response_chinese)
     elif user_response == "Italian":
         return choice(bot_response_italian)
-    elif user_response == "":
-        pass
-    elif user_response == "":
-        pass
+    elif user_response == "Mexican":
+        return choice(bot_response_mexican)
+    elif user_response == "Japanese":
+        return choice(bot_response_japanese)
     elif user_response == "done":
         return "See you next meal!"
     else:
@@ -23,7 +25,7 @@ def get_food_bot_response(user_response):
 
 print("~~~~ Welcome to Food Bot ~~~~")
 print("We reccommend dishes in a specfic cuisine you enter in, an example would be 'Chinese'.")
-print("If you are finished, type in 'done'.")
+print("If you're finished, type in 'done'.")
 
 user_response = ""
 
