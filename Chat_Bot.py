@@ -26,7 +26,7 @@ def get_food_bot_response(user_response):
     else:
         return "Sorry, I don't know that cuisine."
 
-# Title of chat bot
+# Title and instructions of chat bot
 print("~~~~ Welcome to Food Bot ~~~~")
 print("- We reccommend dishes in a specfic cuisine you enter in, an example of a cuisine would be 'Chinese'.")
 print("- If you're finished, type in 'done'.")
