@@ -4,12 +4,15 @@
 
 from random import choice
 
+# Combine functions and conditionals to get a response from the bot
 def get_food_bot_response(user_response):
+    # Bot reponses for cuisines
     bot_response_chinese = ['Hotpot!', 'Dumplings!', 'Peking Roasted Duck!', 'Chow Mein!', 'Steamed Vermicelli Rolls!']
     bot_response_italian = ['Lasagna', 'Risotto!', 'Truffles!', 'Gelato!', 'Pizza!']
     bot_response_mexican = ['Horchate!', 'Chicken Tamales!', 'Chilaquiles!', 'Tostadas!', 'Enchiladas!']
     bot_response_japanese = ['Sushi!', 'Tempura!', 'Tofu!', 'Ramen!', 'Udon!']
 
+    # choice() randomly returns a response from a list
     if user_response == "Chinese":
         return choice(bot_response_chinese)
     elif user_response == "Italian":
@@ -23,12 +26,15 @@ def get_food_bot_response(user_response):
     else:
         return "Sorry, I don't know that cuisine."
 
+# Title of chat bot
 print("~~~~ Welcome to Food Bot ~~~~")
 print("- We reccommend dishes in a specfic cuisine you enter in, an example of a cuisine would be 'Chinese'.")
 print("- If you're finished, type in 'done'.")
 
+# Stores an empty string
 user_response = ""
 
+# Keeps repearing while user_response is not equalt to 'done'
 while user_response != "done":
     user_response = input("What cuisine are you craving right now?: ")
     bot_response = get_food_bot_response(user_response)
